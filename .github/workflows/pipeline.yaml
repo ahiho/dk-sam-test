@@ -14,18 +14,18 @@ env:
   PIPELINE_USER_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
   SAM_TEMPLATE: template.yaml
   TESTING_STACK_NAME: dk-sam-test
-  TESTING_PIPELINE_EXECUTION_ROLE: dk-sam-test
-  TESTING_CLOUDFORMATION_EXECUTION_ROLE: dk-sam-test
-  TESTING_ARTIFACTS_BUCKET: dk-sam-test
+  TESTING_PIPELINE_EXECUTION_ROLE: arn:aws:iam::633674601707:role/aws-sam-cli-managed-dk-sam-t-PipelineExecutionRole-1T46R261QWPWD
+  TESTING_CLOUDFORMATION_EXECUTION_ROLE: arn:aws:iam::633674601707:role/aws-sam-cli-managed-dk-sa-CloudFormationExecutionR-13YTUUKZ7LQWU
+  TESTING_ARTIFACTS_BUCKET: aws-sam-cli-managed-dk-sam-test-p-artifactsbucket-hc12uc03kauk
   # If there are functions with "Image" PackageType in your template,
   # uncomment the line below and add "--image-repository ${TESTING_IMAGE_REPOSITORY}" to
   # testing "sam package" and "sam deploy" commands.
   # TESTING_IMAGE_REPOSITORY = '0123456789.dkr.ecr.region.amazonaws.com/repository-name'
   TESTING_REGION: ap-southeast-1
   PROD_STACK_NAME: dk-sam-test
-  PROD_PIPELINE_EXECUTION_ROLE: dk-sam-test
-  PROD_CLOUDFORMATION_EXECUTION_ROLE: dk-sam-test
-  PROD_ARTIFACTS_BUCKET: dk-sam-test
+  PROD_PIPELINE_EXECUTION_ROLE: arn:aws:iam::633674601707:role/aws-sam-cli-managed-dk-sam-t-PipelineExecutionRole-1T46R261QWPWD
+  PROD_CLOUDFORMATION_EXECUTION_ROLE: arn:aws:iam::633674601707:role/aws-sam-cli-managed-dk-sa-CloudFormationExecutionR-13YTUUKZ7LQWU
+  PROD_ARTIFACTS_BUCKET: aws-sam-cli-managed-dk-sam-test-p-artifactsbucket-hc12uc03kauk
   # If there are functions with "Image" PackageType in your template,
   # uncomment the line below and add "--image-repository ${PROD_IMAGE_REPOSITORY}" to
   # prod "sam package" and "sam deploy" commands.
